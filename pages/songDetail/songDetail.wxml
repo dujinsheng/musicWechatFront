@@ -1,0 +1,39 @@
+<view class="songDetailContainer">
+  <view class="author">{{songDetail.ar[0].name}}</view>
+  <view class="circle"></view>
+  <image class="needle {{isplay ? 'needleRotate' : ''}}" src="../../static/image/songDetail/needle.png">
+  </image>
+
+  <view class="discContainer {{isplay ? 'discAnimation' : ''}}">
+    <image class="disc" src="../../static/image/songDetail/disc.png"></image>
+    <image class="musicImg" src="{{songDetail.al.picUrl}}"></image>
+  </view>
+
+  <!-- 进度条控制区域 -->
+  <view class="progressControl">
+    <!-- 当前的进度 -->
+    <text>{{currentTime}}</text>
+    <!-- 总进度条 -->
+    <view class="barControl">
+      <!-- 实时进度条 -->
+      <view class="audio-currentTime-Bar" style="width: {{currentTimeWidth + 'rpx'}}">
+        <!-- 小圆球 -->
+        <view class="audio-circle"></view>
+      </view>
+    </view>
+    <text>{{totalSongDuration}}</text>
+    <!-- 总共时长 -->
+  </view>
+  <!-- 底部控制播放区域 -->
+  <view class="musicControl">
+    <text class="iconfont icon-suijibofang"></text>
+
+    <text class="iconfont icon-shangyishoushangyige" id="pre" bindtap="handleSwitch"></text>
+
+    <text class="iconfont {{isplay? 'icon-zanting': 'icon-bofang'}} big" bindtap="handleMusicPlay"></text>
+
+    <text class="iconfont icon-xiayigexiayishou" id="next" bindtap="handleSwitch"></text>
+
+    <text class="iconfont icon-31liebiao"></text>
+  </view>
+</view>

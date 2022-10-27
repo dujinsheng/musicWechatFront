@@ -1,0 +1,83 @@
+<!-- 在这里写个人中心页的相关标签 -->
+<view>
+  <!-- head部分 -->
+  <view class="head" bindtap="toLoginPage">
+    <image src="/static/image/bgImg2.jpg"></image>
+    <view class="box">
+      <!-- 头像昵称-->
+      <view class="portraitAndName">
+        <image src="{{userInfo.avatarUrl ? userInfo.avatarUrl : '/static/image/user.jpg'}}"></image>
+        <view><text>{{userInfo.nickname ? userInfo.nickname : '游客'}}</text></view>
+      </view>
+      <!-- 开通会员部分 -->
+      <view class="vip">
+        <view class="top">
+          <view>
+            <text class="iconfont icon-VIP"></text>
+            <text>乐享会员</text>
+          </view>
+          <text class="open">立即开通</text>
+        </view>
+        <view class="enAndZh">
+          <text>leXiang Union</text>
+          <text>立即开通听音乐</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="contain" style="top: {{mobileTop}}" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touhEnd">
+    <view class="radiusImage">
+      <image class="imageBottom" src="/static/image/arc.png"></image>
+    </view>
+    <!-- body部分 我的消息，我的好友，个人主页，个性装扮 -->
+    <view class="body">
+      <view class="iconAndText">
+        <text class="iconfont icon-message"></text>
+        <text class="text">我的消息</text>
+      </view>
+      <view class="iconAndText">
+        <text class="iconfont icon-friend"></text>
+        <text class="text">我的好友</text>
+      </view>
+      <view class="iconAndText">
+        <text class="iconfont icon-Personal"></text>
+        <text class="text">个人主页</text>
+      </view>
+      <view class="iconAndText">
+        <text class="iconfont icon-gexingzhuangban"></text>
+        <text class="text">个性装扮</text>
+      </view>
+    </view>
+    <!-- bottom部分 -->
+    <view class="bottom">
+      <!-- 最近播放 -->
+      <view class="bottom-t">
+        <text>最近播放</text>
+        <view class="scroll" wx:if="{{recentPlayList.length}}">
+          <scroll-view enable-flex scroll-x class="scroll-view" >
+            <view wx:for="{{recentPlayList}}" wx:key="idx" wx:for-item="listItem">
+              <image src="{{listItem.song.al.picUrl}}"></image>
+            </view>
+          </scroll-view>
+        </view>
+        <view class="noneRecentPlayList" wx:else>暂无播放记录</view>
+      </view>
+      <view class="bottom-o">
+        <text>我的音乐</text>
+        <text>></text>
+      </view>
+      <view class="bottom-w">
+        <text>我的收藏</text>
+        <text>></text>
+      </view>
+      <view class="bottom-o">
+        <text>我的歌曲</text>
+        <text>></text>
+      </view>
+      <view class="bottom-w">
+        <text>我的电台</text>
+        <text>></text>
+      </view>
+    </view>
+  </view>
+</view>

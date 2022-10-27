@@ -1,0 +1,36 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  background-color: #d43b33;
+} 
+/* 375/750 = 0.5rpx */
+.userImageAndName {
+  width: 250rpx;
+  height: 300rpx;
+}
+.userName {
+  line-height: 50rpx;
+  height: 50rpx;
+  width: 250rpx;
+  text-align: center;
+  color: #f8f8f8;
+}
+.userImage {
+  border: 1rpx solid grey;
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.userImage image {
+  width: 100%;
+  height: 100%;
+}
+.bottom {
+  color: white;
+}

@@ -1,0 +1,51 @@
+<view class="searchContainer">
+  <!-- 头部搜索区域 -->
+  <view class="header">
+    <view class="searchInput">
+      <text class="iconfont icon-search searchIcon"></text>
+      <input type="text" value="{{searchContent}}" placeholder="{{placeholderContent}}" placeholder-class="placeholder" bindinput="handleInputChange"/>
+      <!-- hidden属性与wx:if稍有不同 -->
+      <text class="clear" bindtap="clearSearchContent" hidden="{{!searchContent}}">X</text>
+      <!-- <text class="clear" bindtap="clearSearchContent" wx:if="{{searchContent}}">X</text> -->
+    </view>
+    <text class="cancel">取消</text>
+  </view>
+
+  <!-- 我们在input中输入了东西的时候，就应该展示查询到的数据，清空的时候，对于之前的搜索数据应该隐藏起来 -->
+  <block wx:if='{{searchContent}}'>
+   <!-- 搜索内容展示 -->
+   <view class="showSearchContent">
+     <view class="searchContent">搜索内容: {{searchContent}}</view>
+     <view class="searchList">
+       <view class="searchItem" wx:for="{{searchList}}" wx:key="id">
+         <text class="iconfont icon-search"></text>
+         <text class="content">{{item.name}}</text>
+       </view>
+     </view>
+   </view>
+  </block>
+
+  <block wx:else>
+    <!-- 搜索历史记录 -->
+    <view class="history" wx:if="{{searchHistoryList.length}}">
+      <view class="title">历史</view>
+      <view class="historyItem" wx:for="{{searchHistoryList}}" wx:key="{{item}}">
+        {{item}}
+      </view>
+      <!-- 删除 -->
+      <text class="iconfont icon-shanchu delete" bindtap="deleteSearchHistory"></text>
+    </view>
+    <!-- 热搜榜 -->
+    <view class="hotContainer">
+      <view class="title">热搜榜</view>
+      <!-- 热搜列表 -->
+      <view class="hotList">
+        <view class="hotItem" wx:for="{{hotList}}" wx:for-index="index" wx:key="searchWord">
+          <text class="order">{{index + 1}}</text>
+          <text>{{item.searchWord}}</text>
+          <image class="iconImg" wx:if="{{item.iconUrl}}" src="{{item.iconUrl}}"></image>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

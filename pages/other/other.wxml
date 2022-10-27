@@ -1,0 +1,13 @@
+<view class="container">
+  <view wx:if="{{photo}}" class="userImageAndName">
+    <view class="userImage">
+      <image src="{{photo}}"></image>
+    </view>
+    <view class="userName">
+      <text>{{userName}}</text>
+    </view>
+  </view>
+  <view wx:else>
+    <button bindtap="handlerGetUserInfo">点击进行授权登录</button>
+  </view>
+</view>

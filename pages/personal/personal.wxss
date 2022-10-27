@@ -1,0 +1,191 @@
+/* 在这里写个人中心页的相关数据 */
+page {
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.head {
+  position: relative;
+  height: 500rpx;
+  width: 100%;
+}
+
+.head image {
+  width: 100%;
+  height: 500rpx;
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+}
+
+.box {
+  position: absolute;
+  top: 100rpx;
+  width: 100%;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  /* 这两个地方可以看出层级关系 */
+  z-index: 1;
+}
+
+.portraitAndName {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  margin-left: 15rpx;
+}
+
+.portraitAndName image {
+  position: static;
+  height: 180rpx;
+  width: 180rpx;
+  border-radius: 100%;
+}
+
+.portraitAndName text {
+  font-size: 50rpx;
+  color: white;
+  line-height: 180rpx;
+  padding-left: 20rpx;
+}
+
+.vip {
+  height: 200rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  border-radius: 16rpx 16rpx 0 0;
+  background-color: rgba(67, 63, 58, 0.9);
+  color: #f8e6a6;
+}
+
+.vip .top {
+  display: flex;
+  justify-content: space-between;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-top: 10rpx;
+  font-size: 20rpx;
+}
+
+.vip .top view text {
+  padding-left: 20rpx;
+}
+
+.vip .top .open {
+  line-height: 30rpx;
+  font-size: 20rpx;
+  margin-right: 20rpx;
+  padding: 10rpx 20rpx;
+  background-color: #f8e6a6;
+  color: black;
+  border: 1px solid black;
+  border-radius: 25rpx;
+  font-weight: 700;
+}
+
+.enAndZh {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 26rpx;
+}
+
+.enAndZh text {
+  margin-top: 10rpx;
+}
+.contain {
+  position: absolute;
+  left: 0rpx;
+  z-index: 999;
+  width: 100%;
+}
+.contain .radiusImage {
+  height: 40rpx;
+}
+.contain .imageBottom {
+  width: 100%;
+  height: 101%;
+}
+/* 我的消息，我的好友，个人主页，个性装扮 */
+.body {
+  background-color: white;
+  height: 150rpx;
+  margin: 0 15rpx;
+  border: 2rpx solid rgb(218, 215, 215);
+  border-radius: 15rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.body .iconAndText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.body .iconAndText .iconfont {
+  font-size: 70rpx;
+  color: #d43b33;
+}
+
+.body .iconAndText .text {
+  font-weight: 700;
+}
+/* bottom部分 */
+.bottom {
+  margin: 0rpx 15rpx;
+  margin-top: 15rpx;
+}
+.bottom-t {
+  background-color: rgb(253, 252, 252);
+  border-radius: 15rpx;
+  display: flex;
+  flex-direction: column;
+}
+.noneRecentPlayList {
+  color: grey;
+  padding-left: 15rpx;
+  font-size: 26rpx;
+}
+.bottom .bottom-t text {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 15rpx;
+  font-size: 26rpx;
+  color: grey;
+}
+.bottom .bottom-t .scroll {
+  height: 150rpx;
+  border-bottom: 2rpx solid #f4f4f4;
+  margin: 0rpx 15rpx 15rpx 15rpx;
+}
+.scroll-view {
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+}
+.scroll-view view {
+  margin-right: 40rpx;
+}
+.scroll-view image {
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 16rpx;
+}
+.bottom-o,.bottom-w {
+  height: 80rpx;
+  background-color: white;
+  margin: 5rpx 0 0 0;
+  border-radius: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  line-height: 80rpx;
+  color: grey;
+}
+.bottom-o,.bottom-w text:nth-child(2) {
+  padding-right: 15rpx;
+} 

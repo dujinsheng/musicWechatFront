@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/recommendSong/recommendSong",
+    "pages/songDetail/songDetail",
+    "pages/personal/personal",
+    "pages/login/login",
+    "pages/video/video",
+    "pages/other/other"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d43b33",
+    "navigationBarTitleText": "乐享云音乐",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#d43b33",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/static/image/home.png",
+        "selectedIconPath": "/static/image/clickedHome.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频页",
+        "iconPath": "/static/image/video.png",
+        "selectedIconPath": "/static/image/clickedVideo.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "/static/image/personal.png",
+        "selectedIconPath": "/static/image/clickedPersonal.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": [
+    "audio"
+  ]
+}

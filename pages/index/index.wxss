@@ -1,0 +1,125 @@
+.swiper {
+  width: 100%;
+  height: 40%;
+  background-color: #2e2e2e;
+}
+
+.swiper image {
+  width: 100%;
+}
+
+.iconJump {
+  display: flex;
+  justify-content: space-around;
+}
+
+.iconJump .iconfont {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #d43b33;
+  font-size: 50rpx;
+  color: #fff;
+  line-height: 100rpx;
+  margin: 20rpx 20rpx;
+}
+
+.iconJump .iconView {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.iconView text {
+  margin: 0 20rpx;
+}
+
+
+.recommendCotain {
+  margin: 0 15rpx;
+}
+
+.recommendScroll {
+  height: 260rpx;
+  display: flex;
+}
+
+.recommendBox {
+  margin-right: 20rpx;
+  width: 200rpx;
+  height: 260rpx;
+}
+
+.recommendBox image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.recommendBox text {
+  height: 50rpx;
+  font-size: 20rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 排行榜样式的样式，注意有些时候应该去使用flex进行布局会更好一点 */
+.topListBody {
+  margin: 0rpx 15rpx;
+}
+.topListBody swiper {
+  height: 390rpx;
+}
+.swiper-item {
+  width: 96%;
+  background-color: #fbfbfb;
+}
+.topListColumn {
+  width: 80%;  
+  height: 100%!important;
+  margin-right: 50rpx;
+}
+
+.topListColumn .title {
+  display: inline-block;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 20rpx;
+  font-weight: 700;
+}
+
+.topListColumnList {
+  height: 100rpx;
+  margin-top: 20rpx;
+
+}
+
+.topListColumnList image {
+  height: 100rpx;
+  width: 100rpx;
+  vertical-align: middle;
+}
+
+.topListColumnList .font {
+  display: inline-block;
+  width: 100rpx;
+  text-align: center;
+  vertical-align: middle;
+  
+}
+.topListColumnList .musicName {
+  vertical-align: middle;
+  display: inline-block;
+  width: 350rpx;
+  height: 100%;
+  line-height: 100rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

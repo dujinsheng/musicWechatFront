@@ -1,0 +1,65 @@
+<!--pages/index/index.wxml-->
+<view>
+  <!-- 轮播图 -->
+  <view class="swiper">
+    <swiper indicator-dots indicator-active-color="rgba(212, 59, 51)" indicator-color="rgba(255, 255, 255)" autoplay>
+      <swiper-item wx:for="{{bannerList}}" wx:key="bannerId">
+        <image src="{{item.pic}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 五个按钮 -->
+  <view class="iconJump">
+    <view class="iconView" bindtap="handlerToRecommendSong">
+      <text class="iconfont icon-tuijian1"></text>
+      <text>每日推荐</text>
+    </view>
+    <view class="iconView" bindtap="handlerToOther">
+      <text class="iconfont icon-gedan"></text>
+      <text>歌单</text>
+    </view>
+    <view class="iconView">
+      <text class="iconfont icon-paihangbang_paiming"></text>
+      <text>排行榜</text>
+    </view>
+    <view class="iconView">
+      <text class="iconfont icon-diantai"></text>
+      <text>电台</text>
+    </view>
+    <view class="iconView">
+      <text class="iconfont icon-zhibo"></text>
+      <text>直播</text>
+    </view>
+  </view>
+  <!-- 推荐栏 -->
+  <view>
+    <NovaHead title="推荐歌曲" nav="为你精心推荐"></NovaHead>
+    <view class="recommendBody" class="recommendCotain">
+      <scroll-view enable-flex class="recommendScroll" scroll-x>
+        <view class="recommendBox" wx:for="{{recommendMusic}}" wx:key="name" wx:for-item="picture">
+          <image src="{{picture.picUrl}}"></image>
+          <text>{{picture.name}}</text>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 排行榜栏 -->
+  <view class="topList">
+    <NovaHead title="排行榜" nav="热歌风向标"></NovaHead>
+    <view class="topListBody">
+      <swiper next-margin="50px">
+        <swiper-item class="topListColumn" wx:for="{{musicTopList}}" wx:for-item="arrList" wx:key="name">
+          <view class="swiper-item">
+            <text class="title">{{arrList.name}} > </text>
+            <view class="topListColumnList" wx:for="{{arrList.tracks}}" wx:for-item="list" wx:key="cd" wx:for-index="idx">
+              <image src="{{list.al.picUrl}}"></image>
+              <text class="font">{{idx + 1}}</text>
+              <text class="musicName">{{list.first}}</text>
+            </view>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+
+</view>

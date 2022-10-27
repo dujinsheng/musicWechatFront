@@ -1,0 +1,131 @@
+/* pages/video/video.wxss */
+.header {
+  height: 60rpx;
+  display: flex;
+  margin: 10rpx 15rpx 0 15rpx;
+}
+
+.header .header-input {
+  height: 58rpx;
+  font-size: 26rpx;
+  line-height: 60rpx;
+  color: #f14245;
+  border: 1px solid #eeeeee;
+  margin: 0rpx 10rpx;
+  flex: 1;
+}
+
+.header .header-input input {
+  height: 58rpx;
+  text-align: center;
+  color: grey;
+}
+
+.header image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+/* 横向滑动导航 */
+.navScroll {
+  display: flex;
+  height: 60rpx;
+  font-size: 26rpx;
+  line-height: 60rpx;
+  margin: 15rpx 15rpx 0 15rpx;
+}
+
+.navItemBorder {
+  border-bottom: 1rpx solid green;
+  margin-right: 15rpx;
+}
+
+.navItem {
+  font-size: 26rpx;
+  white-space: nowrap;
+  width: 100%;
+  height: 50rpx;
+  margin-right: 15rpx;
+}
+
+/* 视屏展示列表 */
+.context {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  width: 720rpx;
+  /* css3的新特性，calc动态的去计算宽或者高，在小程序中100vh会自动减去tarBar的高度 */
+  height: calc(100vh - 136rpx);
+}
+
+.video {
+  width: 100% !important;
+  margin-right: 15rpx;
+}
+
+.video video {
+  width: 100%;
+}
+
+.common {
+  width: 100%;
+  height: 360rpx;
+  border-radius: 10rpx;
+}
+
+.content {
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  max-width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* footer */
+.footer {
+  border-top: 1rpx solid #eee;
+  padding: 20rpx 0;
+}
+
+.footer .avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.footer .nickName {
+  font-size: 26rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+
+.footer .comments_praised {
+  float: right;
+}
+
+.comments_praised .btn {
+  display: inline;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.comments_praised .btn:after {
+  border: none;
+}
+
+.comments_praised .item {
+  margin-left: 50rpx;
+  position: relative;
+}
+
+.comments_praised .item .count {
+  position: absolute;
+  top: -20rpx;
+  font-size: 20rpx;
+}

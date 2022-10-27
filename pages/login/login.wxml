@@ -1,0 +1,22 @@
+
+<!-- 登录页 -->
+<view class="loginPage">
+  <view class="title">欢迎回来!</view>
+  <view class="loginContainer">
+    <view class="inputAndButton">
+      <view class="weui-cell weui-cell_input">
+        <text>手机号码</text>
+        <input id="phone" bindinput="handlerGetNameAndPassword" class="weui-input" auto-focus placeholder="请输入手机号码" />
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <text>密码</text>
+        <input id="password" bindinput="handlerGetNameAndPassword" lass="weui-input" password type="text" placeholder="请输入密码" />
+      </view>
+      <view class="buttonAndRegister">
+        <button bindtap="handletap">登录</button>
+        <text>忘记密码?</text>
+      </view>
+    </view>
+    <view class="registerButton">还没有账号？马上注册</view>
+  </view>
+</view>

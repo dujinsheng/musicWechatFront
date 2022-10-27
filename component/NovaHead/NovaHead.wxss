@@ -1,0 +1,28 @@
+.recommendHead {
+  margin: 20rpx 15rpx;
+}
+
+.recommendHead .header {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.bodybox {
+  display: flex;
+  justify-content: space-between;
+  line-height: 40rpx;
+}
+
+.more {
+  padding: 5rpx 20rpx;
+  font-size: 26rpx;
+}
+
+.bodybox .more {
+  border: 2rpx solid grey;
+  border-radius: 25rpx;
+}
+
+.bodybox .leftbox {
+  line-height: 50rpx;
+}

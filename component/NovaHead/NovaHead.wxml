@@ -1,0 +1,11 @@
+<view class="recommendHead">
+  <text class="header">{{title}}</text>
+  <view class="bodybox">
+    <view class="leftbox">
+      <text>{{nav}}</text>
+    </view>
+    <view class="more">
+      <text>查看更多</text>
+    </view>
+  </view>
+</view>

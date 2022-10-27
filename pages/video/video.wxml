@@ -1,0 +1,58 @@
+<!--pages/video/video.wxml-->
+<view>
+  <view class="header">
+    <image src="/static/image/video/video.jpg" alt="" />
+    <view class="header-input">
+      <input type="text" placeholder="搜索歌曲" bindtap="handlerToSearch"/>
+    </view>
+    <image src="/static/image/video/favicon.ico" alt="" />
+  </view>
+  <scroll-view scroll-into-view="{{ 'scorll' + isNotShowBorder}}" scroll-with-animation class="navScroll" scroll-x enable-flex="true">
+    <view id="{{ 'scorll' + navItem.id}}" wx:for-item="navItem" wx:for="{{navScrollData}}" wx:key="id" class="navItem {{ navItem.id == isNotShowBorder ? 'navItemBorder' : ''}}">
+      <view bindtap="changeNavItem" id="{{navItem.id}}">{{navItem.name}}</view>
+    </view>
+  </scroll-view>
+  <!-- refresher-enabled bindrefresherrefresh="handleRefresher" refresher-triggered="{{refresherTriggered}}"下拉刷新 -->
+  <scroll-view 
+  class="context" 
+  scroll-y 
+  enable-flex="true"
+  refresher-enabled
+  bindrefresherrefresh="handleRefresher"
+  refresher-triggered="{{refresherTriggered}}"
+  bindscrolltolower="handleScrolltolower"
+  >
+    <view class="video" wx:for="{{videoList}}" wx:key="id" wx:for-item="videoItem">
+      <!-- video标签和image标签绑定的事件函数相同 -->
+      <video 
+      wx:if="{{videoId == videoItem.data.vid}}"
+      object-fit="cover"
+      poster="{{videoItem.data.urlInfo.url}}"
+      src="{{videoItem.data.urlInfo.url}}"
+      bindplay="handlePlay"
+      id="{{videoItem.data.vid}}"
+      bindended="videoPlayed"
+      bindtimeupdate="videoPlayTimeUpdate"
+      ></video>
+      <image wx:else bindtap="handlePlay" id="{{videoItem.data.vid}}" class="common" src="{{videoItem.data.coverUrl}}"></image>
+      <view class="content">{{videoItem.data.title}}</view>
+      <view class="footer">
+        <image class="avatar" src="{{videoItem.data.creator.avatarUrl}}"></image>
+        <text class="nickName">{{videoItem.data.creator.nickname}}</text>
+        <view class="comments_praised">
+          <text class="item">
+            <text class="iconfont icon-dianzan"></text>
+            <text class="count">{{videoItem.data.praisedCount}}</text>
+          </text>
+          <text class="item">
+            <text class="iconfont icon-31pinglun"></text>
+            <text class="count">{{videoItem.data.commentCount}}</text>
+          </text>
+          <button open-type="share" class="item btn">
+            <text class="iconfont icon-gengduo-shuxiang"></text>
+          </button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
